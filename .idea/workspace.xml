@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9e1ae58-f475-4616-8024-d5112f118749" name="Default Changelist" comment="Basics" />
+    <list default="true" id="b9e1ae58-f475-4616-8024-d5112f118749" name="Default Changelist" comment="Extraction of single information">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfExtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdfExtraction.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601736559706</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basics">
+      <created>1601736654086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601736654086</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Extraction of single information">
+      <created>1601737491755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601737491755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,35 +112,46 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basics" />
+    <MESSAGE value="Extraction of single information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extraction of single information" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="197" key="GridCell.Tab.0.bottom" timestamp="1601736407094">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1280" height="196" key="GridCell.Tab.0.bottom" timestamp="1601762189743">
+      <screen x="0" y="23" width="1440" height="814" />
     </state>
-    <state width="1379" height="197" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1601736407094" />
-    <state width="1379" height="197" key="GridCell.Tab.0.center" timestamp="1601736407093">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1280" height="196" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1601762189743" />
+    <state width="1379" height="197" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1601737455947" />
+    <state width="1280" height="196" key="GridCell.Tab.0.center" timestamp="1601762189742">
+      <screen x="0" y="23" width="1440" height="814" />
     </state>
-    <state width="1379" height="197" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1601736407093" />
-    <state width="1379" height="197" key="GridCell.Tab.0.left" timestamp="1601736407092">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1280" height="196" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1601762189742" />
+    <state width="1379" height="197" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1601737455946" />
+    <state width="1280" height="196" key="GridCell.Tab.0.left" timestamp="1601762189741">
+      <screen x="0" y="23" width="1440" height="814" />
     </state>
-    <state width="1379" height="197" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1601736407092" />
-    <state width="1379" height="197" key="GridCell.Tab.0.right" timestamp="1601736407093">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1280" height="196" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1601762189741" />
+    <state width="1379" height="197" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1601737455945" />
+    <state width="1280" height="196" key="GridCell.Tab.0.right" timestamp="1601762189742">
+      <screen x="0" y="23" width="1440" height="814" />
     </state>
-    <state width="1379" height="197" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1601736407093" />
+    <state width="1280" height="196" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1601762189742" />
+    <state width="1379" height="197" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1601737455946" />
     <state x="229" y="70" key="SettingsEditor" timestamp="1601736154454">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="229" y="70" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1601736154454" />
-    <state x="320" y="171" key="Vcs.Push.Dialog.v2" timestamp="1601736525974">
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2" timestamp="1601737496178">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state x="320" y="171" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1601736525974" />
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1601737496178" />
+    <state x="320" y="172" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1601736659258" />
+    <state x="533" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601737381017">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="533" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1601737381017" />
   </component>
 </project>
