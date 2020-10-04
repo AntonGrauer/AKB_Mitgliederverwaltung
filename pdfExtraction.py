@@ -1,15 +1,9 @@
 import pdftotext
-
-# Load your PDF and save all text to a txt file
-with open("Mitgliedsdaten.pdf", "rb") as f:
-    antragPDF = pdftotext.PDF(f)
-
-with open('Mitgliedsdaten.txt', 'w') as f:
-    f.write("\n\n".join(antragPDF))
+import os
 
 # Creating method in order to streamline subsequent assignments
-def getValue (valueName):
-    antragCleared = open("Mitgliedsdaten.txt", "r")
+def getValue (dataname, valueName):
+    antragCleared = open("./Mitgliedsanträge/" + dataname, "r", encoding='latin1')
     firstName = 0
     for line in antragCleared:
         lineFirstName = line.find(valueName)
@@ -20,15 +14,28 @@ def getValue (valueName):
 
 # Creating method in order to extract all information
 def getInformation ():
-    information = list()
     categories = ("Vorname", "Nachname", "Telefon (mobil)", "E-Mail Adresse", "Geburtstag (Datum)",
                   "Straße", "PLZ", "Stadt", "Telefon (priv.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
-    for items in categories:
-            information.append(getValue(items))
-    return information
+    antraegeDirectory = "./Mitgliedsanträge"
+    allFiles = os.listdir(antraegeDirectory)
+    allFiles.pop(0)
+    rows, columns = (len(allFiles), len(categories))
+    allInformation = [[0 for x in range(columns)] for x in range(rows)]
+    for i in range(rows):
+        with open("./Mitgliedsanträge/" + allFiles[i], "rb") as f:
+            antragPDF = pdftotext.PDF(f)
+
+        with open("./Mitgliedsanträge/" + allFiles[i] + '.txt', 'w') as f:
+            f.write("\n\n".join(antragPDF))
+
+        for j in range(columns):
+            print (getValue("Mitgliedsdaten Kopie.pdf.txt", categories[1]))
+            allInformation[i][j] = getValue(allFiles[i], categories[j])
+    return allInformation
 
 # Umsetzung der Methoden
-allInformation = getInformation()
-print (allInformation)
+finalInformation = getInformation()
+print (finalInformation)
+
 
 
