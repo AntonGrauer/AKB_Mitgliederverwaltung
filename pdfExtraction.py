@@ -7,29 +7,28 @@ with open("Mitgliedsdaten.pdf", "rb") as f:
 with open('Mitgliedsdaten.txt', 'w') as f:
     f.write("\n\n".join(antragPDF))
 
-antragCleared = open("Mitgliedsdaten.txt", "r")
-
 # Creating method in order to streamline subsequent assignments
-def getValue (valueName, antrag):
+def getValue (valueName):
+    antragCleared = open("Mitgliedsdaten.txt", "r")
     firstName = 0
-    for line in antrag:
+    for line in antragCleared:
         lineFirstName = line.find(valueName)
         if lineFirstName != -1:
             lineFirstNameCleared = line[lineFirstName+len(valueName)+1:]
             firstName = ''.join(lineFirstNameCleared.split())
     return firstName
 
-vorname = getValue("Vorname", antragCleared)
-print (vorname)
+# Creating method in order to extract all information
+def getInformation ():
+    information = list()
+    categories = ("Vorname", "Nachname", "Telefon (mobil)", "E-Mail Adresse", "Geburtstag (Datum)",
+                  "Straße", "PLZ", "Stadt", "Telefon (priv.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
+    for items in categories:
+            information.append(getValue(items))
+    return information
 
-categories = ("Vorname", "Nachname", "Telefon (mobil)", "E-Mail Adresse", "Geburtstag (Datum)",
-              "Straße", "PLZ", "Stadt", "Telefon (priv.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
-
-allInformation = list()
-
-for var in categories:
-        allInformation.append(getValue(var, antragCleared))
-
+# Umsetzung der Methoden
+allInformation = getInformation()
 print (allInformation)
 
 
