@@ -3,26 +3,26 @@
 
 
 
-     Mitgliedsdaten                                                                                         24.09.2020 18:17
-      Vorname                                                         Marcel
-      Nachname                                                        Dreher
-      Telefon (mobil)                                                 017631126184
-      E-Mail Adresse                                                  drehermarcel1811@gmail.com
-      Geburtstag (Datum)                                              18.11.1999
-      Straße                                                          Akazienweg, 3
-      PLZ                                                             76709
-      Stadt                                                           Kronau
-      Telefon (priv.)                                                 017631126184
-      IBAN                                                            DE61 6635 0036 0017 9426 59
-      BIC                                                             BRUSDE66XXX
-      Studiengang                                                     Unternehmensjura
-      Eintrittssemester                                               1
+     Mitgliedsdaten                                                                                          04.10.2020 08:28
+      Vorname                                                          testVorname
+      Nachname                                                         testNachname
+      Telefon (mobil)                                                  testTelefon011187412987
+      E-Mail Adresse                                                   testMailtest.test@test.com
+      Geburtstag (Datum)                                               21.10.2020
+      Straße                                                           testStraße
+      PLZ                                                              testPLZ
+      Stadt                                                            testStadt
+      Telefon (priv.)                                                  testTelefon011119809
+      IBAN                                                             TE11 1111 1111 1111 1111 1_
+      BIC                                                              TESTBIC12
+      Studiengang                                                      testStudiengang
+      Eintrittssemester                                                testEintrittssemester
 
 
 
 
-Arbeitskreis Börse - Studenten der Universität Mannheim e. V. E-Mail: it@akboerse.de                IBAN: DE12 6707 0024 0017 1421 00
-M 4, 3                                                                                              BIC: DEUTDEDBMAN
+Arbeitskreis Börse - Studenten der Universität Mannheim e. V. E-Mail: it@akboerse.de                 IBAN: DE12 6707 0024 0017 1421 00
+M 4, 3                                                                                               BIC: DEUTDEDBMAN
 68161 Mannheim
 
 
@@ -33,7 +33,7 @@ M 4, 3                                                                          
 
 
      Aufnahmeantrag gestellt
-     Am 24.09.2020 um 18:17 wurden folgende Bedingungen akzeptiert:
+     Am 04.10.2020 um 08:28 wurden folgende Bedingungen akzeptiert:
 
              Hiermit ermächtige ich den „Arbeitskreis Börse – Studenten der Universität Mannheim e.V.“ widerruflich, die von mir
              zu entrichtenden Zahlungen von EUR 3,00 pro Monat bei Fälligkeit zu Lasten meines Kontos mittels Lastschrift
