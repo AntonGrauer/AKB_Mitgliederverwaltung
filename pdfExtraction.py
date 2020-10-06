@@ -1,41 +1,55 @@
 import pdftotext
+import csv
 import os
 
 # Creating method in order to streamline subsequent assignments
 def getValue (dataname, valueName):
     antragCleared = open("./Mitgliedsanträge/" + dataname, "r", encoding='latin1')
-    firstName = 0
+    valueCleared = 0
     for line in antragCleared:
-        lineFirstName = line.find(valueName)
-        if lineFirstName != -1:
-            lineFirstNameCleared = line[lineFirstName+len(valueName)+1:]
-            firstName = ''.join(lineFirstNameCleared.split())
-    return firstName
+        lineValue = line.find(valueName)
+        if lineValue != -1:
+            lineValueCleared = line[lineValue+len(valueName)+1:]
+            print (lineValueCleared)
+            valueCleared = ''.join(lineValueCleared.split())
+    return valueCleared
 
 # Creating method in order to extract all information
-def getInformation ():
+def getInformation (fileName):
     categories = ("Vorname", "Nachname", "Telefon (mobil)", "E-Mail Adresse", "Geburtstag (Datum)",
                   "Straße", "PLZ", "Stadt", "Telefon (priv.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
-    antraegeDirectory = "./Mitgliedsanträge"
-    allFiles = os.listdir(antraegeDirectory)
-    allFiles.pop(0)
-    rows, columns = (len(allFiles), len(categories))
-    allInformation = [[0 for x in range(columns)] for x in range(rows)]
-    for i in range(rows):
-        with open("./Mitgliedsanträge/" + allFiles[i], "rb") as f:
-            antragPDF = pdftotext.PDF(f)
-
-        with open("./Mitgliedsanträge/" + allFiles[i] + '.txt', 'w') as f:
-            f.write("\n\n".join(antragPDF))
-
-        for j in range(columns):
-            print (getValue("Mitgliedsdaten Kopie.pdf.txt", categories[1]))
-            allInformation[i][j] = getValue(allFiles[i], categories[j])
+    allInformation = []
+    for value in categories:
+        allInformation.append(getValue(fileName, value))
     return allInformation
 
+def sendInformation(data):
+    with open('Vorlage.csv', 'w') as csvfile:
+        writer = csv.writer(csvfile, delimiter=';')
+        street = []
+        number = []
+        for i in data:
+            for r in range (0,len(i[5])-1,1):
+                if i[5][r] in ("0","1","2","3","4","5","6","7","8","9"):
+                    street = i[5][:r]
+                    number = i[5][r:]
+                    pass
+            newstructure = [('',i[0],i[1],i[3],'1',street,number,i[6],i[7],i[11],i[12])]
+            writer.writerows(newstructure)
+
 # Umsetzung der Methoden
-finalInformation = getInformation()
-print (finalInformation)
+antraegeDirectory = "./Mitgliedsanträge"
+allFiles = os.listdir(antraegeDirectory)
+allFiles.pop(0)
+for antraege in allFiles:
+    with open("./Mitgliedsanträge/" + antraege, "rb") as f:
+        antragPDF = pdftotext.PDF(f)
 
+    with open("./Mitgliedsanträge/" + antraege + '.txt', 'w') as f:
+        f.write("\n\n".join(antragPDF))
 
+    antragInformation = getInformation(antraege + '.txt')
+    #print (antragInformation)
+    os.remove("./Mitgliedsanträge/" + antraege + '.txt')
 
+#sendInformation(antragInformation)
