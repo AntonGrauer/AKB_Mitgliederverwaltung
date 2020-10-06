@@ -33,8 +33,8 @@ def sendInformation(data):
                     street = i[5][:r]
                     number = i[5][r:]
                     pass
-            newstructure = [('',i[0],i[1],i[3],'1',street,number,i[6],i[7],i[11],i[12])]
-            writer.writerows(newstructure)
+        newstructure = [('',i[0],i[1],i[3],'1',street,number,i[6],i[7],i[11],i[12])]
+        writer.writerows(newstructure)
 
 # Umsetzung der Methoden
 antraegeDirectory = "./Mitgliedsanträge"
@@ -48,7 +48,6 @@ for antraege in allFiles:
         f.write("\n\n".join(antragPDF))
 
     antragInformation = getInformation(antraege + '.txt')
-    print (antragInformation)
     os.remove("./Mitgliedsanträge/" + antraege + '.txt')
 
-#sendInformation(antragInformation)
+sendInformation(antragInformation)
