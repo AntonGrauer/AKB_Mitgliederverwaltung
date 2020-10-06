@@ -4,15 +4,14 @@ import os
 
 # Creating method in order to streamline subsequent assignments
 def getValue (dataname, valueName):
-    antragCleared = open("./Mitgliedsanträge/" + dataname, "r", encoding='latin1')
-    valueCleared = 0
+    antragCleared = open("./Mitgliedsanträge/" + dataname, "r", encoding="utf-8")
     for line in antragCleared:
         lineValue = line.find(valueName)
         if lineValue != -1:
             lineValueCleared = line[lineValue+len(valueName)+1:]
-            print (lineValueCleared)
             valueCleared = ''.join(lineValueCleared.split())
-    return valueCleared
+            print (valueCleared)
+            return valueCleared
 
 # Creating method in order to extract all information
 def getInformation (fileName):
@@ -49,7 +48,7 @@ for antraege in allFiles:
         f.write("\n\n".join(antragPDF))
 
     antragInformation = getInformation(antraege + '.txt')
-    #print (antragInformation)
+    print (antragInformation)
     os.remove("./Mitgliedsanträge/" + antraege + '.txt')
 
 #sendInformation(antragInformation)
