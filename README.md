@@ -19,6 +19,8 @@ Aufgabe: Implementierung des folgenden Prozesses - **WICHTIG: Bei allen CSV-Date
   - Bei der Form an Beispiele (Anton Grauer, test) orientieren
   - AKB-Mailadresse entsprechend der Mailadresse, die in "Vorlage_GSuite.csv" eingetragen wurde
   - Alumni als Default nein
+  - Mitgliedernummer fortlaufend auf letzten Eintrag (unterste Zeile) aufsetzen
+  - Mandatsreferenznummer = Mitgliedernummer
 
 **3. Befüllung der Datei "Vorlage_BVH.csv"**
   - Bei der Form an Beispiel (Anton Grauer) orientieren
@@ -31,7 +33,7 @@ Aufgabe: Implementierung des folgenden Prozesses - **WICHTIG: Bei allen CSV-Date
   - Überprüfung, ob der Nutzername bereits vorhanden ist (hierfür die Datei "ListeWebsite.csv" nutzen)
      - wenn Nutzername bereits vorhanden,  2. Buchstaben des Vornamens auch noch hinzunehmen
      - usw.
-  - Für die ID die Mitgliedsnummer aus der Mitgliederliste nehmen
+  - Für die ID die Mitgliedsnummer aus der Datei "Mitgliederliste_Test.xlsx" nehmen
   
 
 **5. Befüllung der Datei "Vorlage_MailChimp.csv"**
