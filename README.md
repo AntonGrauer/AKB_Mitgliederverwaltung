@@ -12,7 +12,7 @@ Aufgabe: Implementierung des folgenden Prozesses - WICHTIG: Bei allen CSV-Dateie
         - wenn Adresse bereits vorhanden, Mailadresse ändern zu "[1.Buchstabe Vorname]nachname@akboerse.de"
         - Sofern auch diese Adresse schon verwendet wird, den 2. Buchstaben des Vornamens auch noch hinzunehmen
         - usw....
-  - Befüllung der anderen relevanten Daten
+  - Befüllung der anderen relevanten Daten an Beispiel (Anton Grauer) orientieren
   - Für die Generierung eines Passworts müssen wir in Python acht Zufallszahlen & -buchstaben generieren und die dann eintragen
 
 2. Befüllung der Datei "Vorlage Vorlage_BVH.csv"
