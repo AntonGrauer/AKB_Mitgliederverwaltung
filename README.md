@@ -8,7 +8,7 @@ Aufgabe: Implementierung des folgenden Prozesses - **WICHTIG: Bei allen CSV-Date
 
 **1. Befüllung der Datei "Vorlage_GSuite.csv"**
   - Generierung einer Mail-Adresse für jedes Mitglied in der Form "nachname@akboerse.de"
-        - Überprüfung, ob die Mailadresse bereits vorhanden ist (hierfür die Mitgliederliste nutzen)
+        - Überprüfung, ob die Mailadresse bereits vorhanden ist (hierfür die Datei "Mitgliederliste_Test.xslx" nutzen)
         - wenn Adresse bereits vorhanden, Mailadresse ändern zu "[1.Buchstabe Vorname]nachname@akboerse.de"
         - Sofern auch diese Adresse schon verwendet wird, den 2. Buchstaben des Vornamens auch noch hinzunehmen
         - usw....
