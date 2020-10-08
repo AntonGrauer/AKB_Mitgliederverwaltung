@@ -15,7 +15,8 @@ def getValue (dataname, valueName):
 # Creating method in order to extract all information
 def getInformation (fileName):
     categories = ("Vorname", "Nachname", "Telefon (mobil)", "E-Mail Adresse", "Geburtstag (Datum)",
-                  "Straße", "PLZ", "Stadt", "Telefon (priv.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
+                  "Straße", "Hausnummer", "PLZ", "Stadt", "Telefon (priv.)", "Straße (gesch.)",
+                  "PLZ (gesch.)", "Stadt (gesch.)", "IBAN", "BIC", "Studiengang", "Eintrittssemester")
     allInformation = []
     for value in categories:
         allInformation.append(getValue(fileName, value))
@@ -23,7 +24,7 @@ def getInformation (fileName):
 
 # Creating method that writes the whole data into a csv-file
 def sendInformation(data):
-    with open('Vorlage.csv', 'w') as csvfile:
+    with open('Vorlage_BVH.csv', 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=';')
         writer.writerows(data)
 
@@ -40,6 +41,7 @@ for antraege in allFiles:
         f.write("\n\n".join(antragPDF))
 
     antragInformation = getInformation(antraege + '.txt')
+    print (antragInformation)
     finalInformation.append(antragInformation)
     os.remove("./Mitgliedsanträge/" + antraege + '.txt')
 
