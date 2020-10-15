@@ -28,7 +28,12 @@ def getInformation (fileName):
 
 # creating method to create email address
 def createMail( prename, surname):
-    maillist = pandas.read_excel("Mitgliederliste_Test.xlsx")
+    with open('Vorlage_GSuite.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=';')
+        gsuitemails = list(reader)
+    maillist = []
+    for i in gsuitemails:
+        maillist = maillist+(i)
     mail = surname + "@akboerse.de"
     prename.replace(" ","")
     a = 0
@@ -47,14 +52,11 @@ def sendInformation(data):
     with open('Vorlage_BVH.csv', 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=';')
         writer.writerows(data)
-    gsuitedata = []
-    for i in range(0, len(data)):  # data gets formated so it only contains necessary information
-        gsuitedata.append(
-            [data[i][0], data[i][1], createMail(data[i][0], data[i][1]), createPasskey(), "", "/Normale Mitglieder", "",
-             data[i][3]])
     with open('Vorlage_GSuite.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=';')
-        writer.writerows(gsuitedata)
+        for i in range(0, len(data)):  # data gets formated so it only contains necessary information
+            writer.writerows([[data[i][0], data[i][1], createMail(data[i][0], data[i][1]), createPasskey(), "", "/Normale Mitglieder", "",
+                 data[i][3]]])
 
 
 # Umsetzung der Methoden
