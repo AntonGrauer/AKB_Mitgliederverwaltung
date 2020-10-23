@@ -22,7 +22,7 @@ _Prozess Neuantrag:_
         - Feld Adresszusatz nicht befüllen, alles nach dem Straßennamen in Spalte Hausnummer schreiben
     4. Mailchimp: Mailportal (in erste Zeile Spaltenüberschriften (siehe Vorlage Mailchimp))
         - Achtung: Mailadressen nicht vertauschen (in vorderer Spalte steht private Mailadresse)
-    5. Wordpress: Website-Benutzer (in erste Zeile Spaltenüberschriften (siehe Vorlage BVH))
+    5. Wordpress: Website-Benutzer (in erste Zeile Spaltenüberschriften (siehe Vorlage Website))
         - Für Spalte ID Mitgliedsnummer nehmen
 
 **Upload**
