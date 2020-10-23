@@ -1,6 +1,7 @@
 # AKB_Mitgliederverwaltung
 
 _Prozess Neuantrag:_
+
 **Antragsstellung**
 1. Auf Website ist Antrag verlinkt —> Öffnung neuer Tab mit Mitgliedsantrag (provided by easyVerein)
 2. Sobald ausgefüllt: Mail mit PDF an IT-Department gesendet & Hinterlegung in EasyVerein zur Genehmigung
